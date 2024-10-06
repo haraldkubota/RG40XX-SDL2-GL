@@ -15,3 +15,23 @@ on Debian 12.7.
 Using the original cross-rs container images,
 I could only get SDL 2.0.10 which was too old and it caused linker errors.
 
+## How to Use
+
+For non-cross-compile, just use the usual
+
+```
+cargo build
+```
+
+and for cross compiling, after having installed [cross-rs](https://github.com/cross-rs/cross), do
+
+```
+cross build
+```
+
+The resulting binary will be in ./target/aarch64-unknown-linux-gnu/debug/sdl2-gl (about 6MB).
+Copy it over to your RG40XX (mine runs Knulli from
+[here](https://github.com/knulli-cfw/distribution/releases/tag/20240721).
+Log in (e.g. I do `ssh knulli.local`) and the run it.
+You should see the famous colored triangle on the screen.
+
