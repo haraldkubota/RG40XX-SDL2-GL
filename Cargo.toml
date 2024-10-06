@@ -1,0 +1,9 @@
+[package]
+name = "sdl2-gl"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ffi = "0.1.1"
+gl = "0.14.0"
+sdl2 = "0.37.0"
